@@ -22,9 +22,9 @@ yaml_version: 4
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
   author:       "Arfan Ghani"      # Your name
-  title:        "Cortico Neuro"      # Project title
+  title:        "Cortico Neuro 1"      # Project title
   language:     "Wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  "Spike trains"      # Short description of what your project does
+  description:  "Information processing in the brain occurs through a sophisticated network of neurons that communicate using reliable electrical impulses, commonly known as action potentials or spikes. As a result, information is encoded as a sequence of events unfolding over continuous time, rather than relying on signal amplitude. Investigating how information is represented and processed as these spike trains, referred to as the neural coding problem, presents a significant challenge within the field of brain-inspired computing. Given the current emphasis on sparseness in signal processing, spike trains are particularly attractive. To explore the variability and the corresponding time stamps, this chip has implemented several test clusters featuring various spike trains. "      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
@@ -36,34 +36,35 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - CLOCK Attached to the on-board clock
+    - INO Connected with a 1-bit FF
+    - IN1 input to the MUX whereas the Second input comes from the Clock
+    - IN2 Enable signal to the MUX to pick from a switch or the clock (0->CLK and 1 - > )
+    - IN3 NC
+    - IN4 Input to the (6x6x6) cluster 
+    - IN5 Input to the (6x6x6) cluster
+    - IN6 Input to the (6x6x6) cluster
+    - IN7 Input to the (6x6x6) cluster
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - OUT0 on-chip CLOCK 
+    - OUT1 Output from the LFSR
+    - OUT2 Output from 2-bit FF 
+    - OUT3 Output from 3-bit FF
+    - OUT4 Output from 4-bit FF
+    - OUT5 Output from 5-bit FF
+    - OUT6 Output from 6-bit FF 
+    - OUT7 MUX output)
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - D0  OUTPUT from a 1-bit FF
+    - D7 OUTPUT from (1x3x3) cluster
+    - D1 OUTPUT from the (5X5) cluster as a raster plot 
+    - D2 OUTPUT from (6x6x6) cluster
+    - D3 OUTPUT from (6x6x6) cluster
+    - D4 OUTPUT from (6x6x6) cluster
+    - D5 INPUT to the (6x6x6) cluster
+    - D6 INPUT to the (6x6x6) cluster
 
 # The following fields are optional
   tag:          ""      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
