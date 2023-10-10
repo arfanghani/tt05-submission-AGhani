@@ -24,7 +24,7 @@ documentation:
   author:       "Arfan Ghani"      # Your name
   title:        "Cortico Neuro 1"      # Project title
   language:     "Wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  "Information processing in the brain occurs through a sophisticated network of neurons that communicate using reliable electrical impulses, commonly known as action potentials or spikes. As a result, information is encoded as a sequence of events unfolding over continuous time, rather than relying on signal amplitude. Investigating how information is represented and processed as these spike trains, referred to as the neural coding problem, presents a significant challenge within the field of brain-inspired computing. Given the current emphasis on sparseness in signal processing, spike trains are particularly attractive. To explore the variability and the corresponding time stamps, this chip has implemented several test clusters featuring various spike trains. "      # Short description of what your project does
+  description:  " Information is encoded as a sequence of events or spikes in neuro-inspired computing. Investigating how information is represented and processed as spike trains is of particular interest. This chip implements several test clusters featuring various spike trains. "      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
@@ -32,14 +32,14 @@ documentation:
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Provide input clock frequencies to the neuron clusters and observe the output from the PCB header pins through the oscilloscope.
+      Provide input clock frequencies to the neuron clusters and observe the output through the oscilloscope.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
     - CLOCK Attached to the on-board clock
     - INO Connected with a 1-bit FF
     - IN1 external input to the MUX
-    - IN2 Enable signal to the MUX to pick from either IN1 or the on-chip clock (0->CLK and 1 - > IN1 )
+    - IN2 Enable signal to the MUX  
     - IN3 NC
     - IN4 Input to the (6x6x6) cluster 
     - IN5 Input to the (6x6x6) cluster
@@ -59,7 +59,7 @@ documentation:
   bidirectional:
     - D0  OUTPUT from a 1-bit FF
     - D7 OUTPUT from (1x3x3) cluster
-    - D1 OUTPUT from the (5X5) cluster as a raster plot 
+    - D1 OUTPUT from the (5X5) cluster  
     - D2 OUTPUT from (6x6x6) cluster
     - D3 OUTPUT from (6x6x6) cluster
     - D4 OUTPUT from (6x6x6) cluster
