@@ -22,7 +22,7 @@ yaml_version: 4
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
   author:       "Arfan Ghani"      # Your name
-  title:        "Cortico Neuro 1"      # Project title
+  title:        "AGL CorticoNeuro-1"      # Project title
   language:     "Wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   description:  " Information is encoded as a sequence of events or spikes in neuro-inspired computing. Investigating how information is represented and processed as spike trains is of particular interest. This chip implements several test clusters featuring various spike trains. "      # Short description of what your project does
 
@@ -40,14 +40,14 @@ documentation:
     - INO Connected with a 1-bit FF
     - IN1 external input to the MUX
     - IN2 Enable signal to the MUX  
-    - IN3 NC
+    - IN3 Connected as a SELECT pin for the MUX (connected with (1x3x2x1) and (6x6x6) cluster.
     - IN4 Input to the (6x6x6) cluster 
     - IN5 Input to the (6x6x6) cluster
     - IN6 Input to the (6x6x6) cluster
     - IN7 Input to the (6x6x6) cluster
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - OUT0 on-chip CLOCK 
+    - OUT0 on-board CLOCK 
     - OUT1 Output from the LFSR
     - OUT2 Output from 2-bit FF 
     - OUT3 Output from 3-bit FF
@@ -62,7 +62,7 @@ documentation:
     - D1 OUTPUT from the (5X5) cluster  
     - D2 OUTPUT from (6x6x6) cluster
     - D3 OUTPUT from (6x6x6) cluster
-    - D4 OUTPUT from (6x6x6) cluster
+    - D4 connected as an OUTPUT pin from either the (6x6x6) cluster or the (1x3x2x1) cluster (where IN3 is the input select pin)
     - D5 INPUT to the (6x6x6) cluster
     - D6 INPUT to the (6x6x6) cluster
 
