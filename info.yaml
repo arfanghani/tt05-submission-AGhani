@@ -28,7 +28,7 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      The input clock is connected with the inputs of the neuron clusters. The bi-directional pins are provided where external input stimulus could be provided. The raster spiking plots are generated to observe the variability of different spiking neuron clusters. 
+      In this design, the input clock is connected with the inputs of the neuron clusters. The bi-directional pins are provided where external input stimulus could be provided. The raster spiking plots are generated to observe the variability of different spiking neuron clusters. 
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
